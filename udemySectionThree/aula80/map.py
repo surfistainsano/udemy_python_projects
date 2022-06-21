@@ -9,6 +9,7 @@ from dados import produtos, pessoas, lista
 
 # adicionar uma porcentagem sobre os precos que estão dentro de um dict
 
+
 def aumentaPreco(p):
     p['preco'] = round(p['preco'] * 1.05, 2)
     return p
