@@ -33,7 +33,7 @@ alunosAgrupados = groupby(alunos, ordena)
 # para ver a QUANTIDADE de alunos que tiraram tal nota:
 
 for v1, v2 in alunosAgrupados:
-    va1, va2 = tee(v2)  # duas cópias do dicionário que contém os alunos e suas notas
+    va1, va2 = tee(v2)  # duas cópias do objeto groupby que contém os alunos e suas notas
     print(f'Agrupamento: {v1}')
 
     for aluno in va1:
