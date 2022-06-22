@@ -1,4 +1,5 @@
 import openpyxl
+from random import uniform
 
 pedidos = openpyxl.load_workbook('pedidos.xlsx')  # A variável herda os métodos e propriedades do WorkBook
 nome_planilhas = pedidos.sheetnames  # É exibido o nome das planilhas existentes no arquivo
@@ -26,6 +27,7 @@ for linha in planilha1['a1:c2']:  # planilha1['a1:c2'] Retorna uma tupla contend
         print(coluna.value)
 """
 
+"""
 # É possível percorrer a planilha inteira:
 for linha in planilha1:
     # len(linha) Para saber a quantidade de colunas na linha
@@ -35,3 +37,46 @@ for linha in planilha1:
         print(linha[1].value, end=" ")
     if linha[2].value is not None:
         print(linha[2].value)
+"""
+
+planilha1['b3'].value = 3200  # Não altera a planilha original
+
+"""
+# Para salvar as alterações em um novo arquivo:
+# pedidos.save('planilha_modificada.xlsx')
+
+for linha in range(5, 16):  # o for percorrerá até a linha 15
+    num_pedido = linha - 1  # 4 até 14
+    planilha1.cell(linha, 1).value = num_pedido
+    # object.cell(num_linha, num_coluna) A coluna é representada por número e não por letra
+    planilha1.cell(linha, 2).value = 1200 + linha
+
+    preco = round(uniform(10, 100), 2)
+    planilha1.cell(linha, 3).value = preco
+
+pedidos.save('planilha_modificada.xlsx')
+"""
+
+# Para criar uma nova planilha
+
+planilha = openpyxl.Workbook()
+planilha.create_sheet('Planilha1', 0)
+planilha.create_sheet('Planilha2', 1)
+
+planilha_1 = planilha['Planilha1']
+planilha_2 = planilha['Planilha2']
+
+for linha in range(1, 11):
+    num_pedido = linha - 1
+    planilha_1.cell(linha, 1).value = num_pedido
+    planilha_1.cell(linha, 2).value = 1200 + linha
+
+    preco = round(uniform(10, 100), 2)
+    planilha_1.cell(linha, 3).value = preco
+
+for linha in range(1, 11):
+    planilha_2.cell(linha, 1).value = f'Leonardo {linha} {round(uniform(10, 100), 2)}'
+    planilha_2.cell(linha, 2).value = f'Camila {linha} {round(uniform(10, 100), 2)}'
+    planilha_2.cell(linha, 3).value = f'Thaís {linha} {round(uniform(10, 100), 2)}'
+
+planilha.save('nova_planilha.xlsx')
