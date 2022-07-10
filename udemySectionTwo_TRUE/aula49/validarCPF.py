@@ -1,4 +1,4 @@
-cpfCliente = '168.995.350-09'
+cpfCliente = '810.818.777-07'
 
 newCpf = cpfCliente.split('.')
 newCpf += newCpf[2].split('-')

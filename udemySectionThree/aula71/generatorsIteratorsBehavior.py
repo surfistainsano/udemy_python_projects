@@ -18,5 +18,5 @@ print('O for consumirá o resto')
 for letra in gerador:
     print(letra)
 
-# ao usar dois for, o segundo não retornará valor, pois o primeiro já terá o "consumido" o iterador
+# ao usar dois for, o segundo não retornará valor, pois o primeiro já terá o "consumido"
 # geradores e iteradores são feitos para consumirem seus valores, ou seja, depois de iterados por completo, esvaziam-se.

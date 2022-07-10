@@ -27,7 +27,7 @@ f = []
 
 # CERTO
 variavelBool = a or b or c or e or d or f
-print(variavelBool)
+print(variavelBool)  # Nota-se que é exibido o ÚLTIMO True
 
 # ERRADO
 if a:

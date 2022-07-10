@@ -5,12 +5,12 @@
 
 voidSet = set()
 voidSet.add('arroz')
-s1 = {1,2,3,4,5}
+s1 = {1, 2, 3, 4, 5}
 s1.discard(5)
 # s1.update('XYZ')  # a função update ITERA sobre cada item do valor passado (não respeita ordem)
-s1.update({9,10,5}, [5,6,7], (13,14))  # usa-se sets para se lidar com arranjos
+s1.update({9, 10, 5}, [5, 6, 7], (13, 14))  # usa-se sets para se lidar com arranjos
 
-l2 = [1,1,1,2,2,3,4,5,6,6,6,6,'Leo', 'Leo', 'Laura']
+l2 = [1, 1, 1, 2, 2, 3, 4, 5, 6, 6, 6, 6, 'Leo', 'Leo', 'Laura']
 s2 = set(l2)  # elementos duplicados são ignorados
 tratedL2 = list(s2)
 
@@ -18,7 +18,7 @@ tratedL2 = list(s2)
 
 s3 = {1, 2, 3, 4, 5, 7}
 s4 = {1, 2, 3, 4, 5, 6}
-# s5 = s3 | s4  # para duplicar, utiliza-se o pipe |
+# s5 = s3 | s4  # para duplicar, utiliza-se o pipe | // {1, 2, 3, 4, 5, 6, 7}
 # s5 = s3 & s4  # para exibir os elementos presentes nos dois sets, utiliza-se o &
 # s5 = s3 - s4  # são exibidos os elementos que constam somente no set da ESQUERDA (primeiro)
 # s5 = s3 ^ s4  # são exibidos os elementos que estão nos dois sets, mas NÃO EM AMBOS

@@ -19,7 +19,7 @@
 
 # def funcao1(arg, **kwargs):
 #     print(arg)
-#     func3 = kwargs.get('func3')
+#     func3 = kwargs.get('func3')  # É atribuído à variável o return da function
 #     func4 = kwargs.get('func4')
 #     print(func3)
 #     print(func4)

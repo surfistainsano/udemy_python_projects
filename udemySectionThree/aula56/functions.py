@@ -1,8 +1,8 @@
 def funcao(*args, **kwargs):  # a função irá "empacotar" os argumentos em uma tupla
-    # a comunidade pytohn recomenda o nome 'args' ou 'kwargs'
+    # a comunidade python recomenda o nome 'args' ou 'kwargs'
     # kwargs "empacota" em {} e pode-se acessar por meio da keyword
     # print(args)  # acessa-se por meio de index (por ser tupla)
-    # print(kwargs['Nacionalidade'])  # acessa-se por meio de brackets informando a kw
+    # print(kwargs['nacionalidade'])  # acessa-se por meio de brackets informando a kw
     cor = kwargs.get('cor')
     nacionalidade = kwargs.get('nacionalidade')
 
