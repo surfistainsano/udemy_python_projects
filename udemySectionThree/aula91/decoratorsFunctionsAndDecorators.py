@@ -9,6 +9,7 @@
 # def falaOi():
 #     print('Oi')
 #
+#
 # @master
 # def showMsg(msg):  # foi usado *args e **kwargs para resolver o erro de parâmetro, assim a função SLAVE replica a função decorada
 #     print(msg)
@@ -38,7 +39,7 @@ def velocidade(funcao):
         endTime = time()
         tempo = (endTime - startTime) * 1000
         print(f'\nA função {funcao.__name__} levou o tempo de {tempo:.2f}ms para executar.')
-        return resultado
+
     return interna
 
 

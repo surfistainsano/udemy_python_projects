@@ -19,7 +19,7 @@ Válido
 
 Recap.
 543298765432 -> Primeiro digito
-6543298765432 -> Segunro digito
+6543298765432 -> Segundo digito
 """
 import cnpj
 

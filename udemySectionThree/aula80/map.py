@@ -1,5 +1,6 @@
 from dados import produtos, pessoas, lista
 
+
 # a função map() recebe uma function como primeiro argumento. Logo, o segundo é o iterável
 # a função map() aplica a função posta no primeiro argumento em cada item do iterável (segundo argumento)
 
@@ -16,6 +17,7 @@ def aumentaPreco(p):
 
 
 novosProdutos = map(aumentaPreco, produtos)
+
 
 # for produto in novosProdutos:
 #     print(produto)

@@ -14,6 +14,8 @@ print(hasattr(listaIter, '__next__'))
 
 lista1 = list(range(100))  # desse modo, os valores são atribuidos ao mesmo tempo na lista, ou seja, exige muita memória
 print(sys.getsizeof(lista1))
+
+
 # por isso, utiliza-se generator, a fim de obter os valores somente quando necessário
 # geradores são ITERÁVEIS e por serem ITERADORES possuem o método next e iter
 

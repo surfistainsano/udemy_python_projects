@@ -1,7 +1,6 @@
-
 try:
     a = []
-    ar = 1/0
+    ar = 1 / 0
     # print(ar[1])
 except NameError as erro:
     print('Algo inesperado aconteceu.')
