@@ -1,7 +1,0 @@
-ERROR: Pocophone F1 não está ligado.
-INFO: Pocophone F1 está conectado.
-ERROR: Pocophone F1 já está conectado.
-ERROR: Pocophone F1 já está conectado.
-ERROR: Pocophone F1 não está ligado.
-INFO: Pocophone F1 foi desconectado com sucesso.
-ERROR: Pocophone F1 não está conectado.

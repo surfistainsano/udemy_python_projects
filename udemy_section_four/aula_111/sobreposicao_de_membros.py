@@ -21,7 +21,7 @@ class Aluno(Pessoa):  # SUB CLASSE
         print(f'{self.nome_da_classe} estudando...')
 
 
-class ClienteVip(Cliente):  # ClienteVip HERDA de cliente que HERDA de Pessoa. Logo, ClienteVip HERDA de Pessoa.
+class ClienteVip(Cliente):  # ClienteVip HERDA de Cliente que HERDA de Pessoa. Logo, ClienteVip HERDA de Pessoa.
     # para criar um método __init__ na sub classe, sem sobrescrever o método __init__ da super classe
     def __init__(self, nome, idade, favorite_color, sobrenome):
         # Pessoa.__init__(self, nome, idade)  # pode-se chamar o __init__ pelo nome da Classe também
@@ -45,7 +45,7 @@ class ClienteVip(Cliente):  # ClienteVip HERDA de cliente que HERDA de Pessoa. L
         print('Outra coisa')
     """
 
-# ao observar o módulo utils.py, nota-se após instanciar o objeto e chamar o método .falar(), o interpretador do python
+# ao observar o módulo main.py, nota-se q após instanciar o objeto e chamar o método .falar(), o interpretador do python
 # irá procurar tal método na classe que o chamou - ClienteVip. Não encontrando, irá subir pela lógica da herança, ou
 # seja, irá procurar o método na classe Cliente. Não encontrando, irá procurar na super classe Pessoa. Encontrando-o,
 # será executado. Por isso, deve-se ficar atento à sobreposição de membros.

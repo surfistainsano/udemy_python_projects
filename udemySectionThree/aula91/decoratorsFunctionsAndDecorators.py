@@ -35,7 +35,7 @@ from time import sleep
 def velocidade(funcao):
     def interna(*args, **kwargs):
         startTime = time()
-        resultado = funcao(*args, **kwargs)
+        funcao(*args, **kwargs)
         endTime = time()
         tempo = (endTime - startTime) * 1000
         print(f'\nA função {funcao.__name__} levou o tempo de {tempo:.2f}ms para executar.')

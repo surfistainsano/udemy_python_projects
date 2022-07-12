@@ -18,4 +18,3 @@ p1 = Pessoa.por_ano_nascimento('Leonardo', 1999)
 print(p1.nome)
 print(p1.idade)
 p1.get_birth_year()
-

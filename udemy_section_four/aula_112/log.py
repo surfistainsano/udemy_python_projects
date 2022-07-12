@@ -18,4 +18,3 @@ class LogMixin:
 # nota-se que a classe LogMixin não tem relação alguma com as classes Smartphone e Eletronico, porém, para que seja
 # adicionada a funcionalidade de gerar log's em ambas as classes, é utilizado o Mixin. Nesse caso, cabe o conceito de
 # herança múltipla, pois a classe LogMixin serve apenas para adicionar uma funcionalidade a outra classe.
-
