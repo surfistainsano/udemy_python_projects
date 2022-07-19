@@ -38,7 +38,7 @@ class Retangulo:
 
 
 r1 = Retangulo(10, 20)
-r2 = Retangulo(20, 30)
+r2 = Retangulo(10, 20)
 
 # print(r1 == r2)  # sem ensinar o que o sinal operador == deve retornar, dará como resultado False, pois ele,
 # no momento, está comparando o endereço da memória do objeto, ou seja, são diferentes.

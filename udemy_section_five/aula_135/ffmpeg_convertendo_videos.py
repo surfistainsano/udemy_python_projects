@@ -39,7 +39,7 @@ for root, dirs, files in os.walk(caminho_origem):
 
         nome_arquivo, extensao_arquivo = os.path.splitext(file)
 
-        arquivo_saida = f'{caminho_destino}\\{nome_arquivo}_novo.mkv'
+        arquivo_saida = fr'{caminho_destino}\{nome_arquivo}_novo.mkv'
 
         # para salvar no mesmo diretório:
         # new_name_file = nome_arquivo + '_novo' + extensao_arquivo

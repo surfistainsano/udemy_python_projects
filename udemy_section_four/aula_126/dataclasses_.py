@@ -46,6 +46,8 @@ class Carro:
 c1 = Carro('Mitsubishi', 'Lancer')
 c2 = Carro('Toyota', 'Corolla')
 
+print(c1)
+
 # para converter class em dict ou tuple
 print(asdict(c1))
 print(astuple(c2))

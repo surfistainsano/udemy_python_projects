@@ -12,8 +12,8 @@
 #
 #
 # a = A()
-
-
+#
+#
 # class A:
 #     def __new__(cls, *args, **kwargs):
 #         if not hasattr(cls, '_jaexiste'):
@@ -55,7 +55,7 @@ class A:
         if key == 'nome':
             self.__dict__[key] = 'The jokes on you!'
         else:
-            self.__dict__[key] = value
+            self.__dict__[key] = value.upper()
 
     def __str__(self):  # altera o retorno ao printar um objeto instanciado | a = A() | print(a) // "<class 'A'>"
         return "<class 'A'>"

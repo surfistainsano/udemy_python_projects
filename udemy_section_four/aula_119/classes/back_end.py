@@ -3,4 +3,4 @@ class Biblioteca:
         print('Método da biblioteca')
 
     def call_method_from_interface(self):
-        self.inteface_method()  # é utilizada a INSTÂNCIA EM SI e não a classe pai.
+        self.interface_method()  # é utilizada a INSTÂNCIA EM SI e não a classe pai.

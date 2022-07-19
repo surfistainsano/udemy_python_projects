@@ -33,9 +33,9 @@ class Conta(ABC):
         self.detalhes()
 
     def detalhes(self):
-        print(f'Agência: {self.agencia}', end=' ')
-        print(f'Conta: {self.conta}', end=' ')
-        print(f'Saldo: {self.saldo}')
+        print(f'Agência: {self._agencia}', end=' ')
+        print(f'Conta: {self._conta}', end=' ')
+        print(f'Saldo: {self._saldo}')
 
     @abstractmethod
     def sacar(self, valor):

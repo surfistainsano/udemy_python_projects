@@ -37,7 +37,7 @@ class Meta(type):
         if name == 'A':
             return type.__new__(mcs, name, bases, namespace)
 
-        if 'b_falar' not in namespace:  # verificar se contém o nome da membro
+        if 'b_falar' not in namespace:  # verificar se contém o nome do membro
             print(f'É preciso criar o método b_falar na classe {name}, para não haver erro.')
         else:
             if not callable(namespace['b_falar']):  # verifica se é uma function
@@ -54,7 +54,7 @@ class Meta(type):
 """
 def __new__(mcs, name, bases, namespace)
 mcs é a classe em si
-nome é o nome da classe a ser criada
+name é o nome da classe a ser criada
 bases é o nome da superclasse/classe pai das classes filhas
 namespace é o nome dos métodos e propriedades das classes filhas (toda classe tem namespace)
 é possível criar classes com o ->type<-
@@ -90,4 +90,4 @@ Arroz = type('Arroz', (), {'marca': 'Tio joão', 'tempo_de_cozimento': 30})
 a = Arroz()
 print(a.tempo_de_cozimento)  # // 30
 print(type(a))  # // <class '__main__.Arroz'> | ou seja, é uma classe NORMAL
-# ->type<- é uma metaclasse, pois isso é herdado dela para criar metaclasses
+# ->type<- é uma metaclasse, por isso é herdado dela para criar metaclasses

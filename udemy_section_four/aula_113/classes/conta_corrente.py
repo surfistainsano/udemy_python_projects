@@ -12,9 +12,9 @@ class ContaCorrente(Conta):
         return self._limite
 
     def sacar(self, valor):
-        if (self.saldo + self.limite) < valor:
+        if (self._saldo + self._limite) < valor:
             print('Saldo Insuficiente.')
             return
 
-        self.saldo -= valor
+        self._saldo -= valor
         self.detalhes()

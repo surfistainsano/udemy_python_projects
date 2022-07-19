@@ -42,6 +42,6 @@ print(bd.dados)
 
 # o encapsulamento no python se dá por convenção
 # pondo o _ antes da variável, recomenda-se que não seja acessado tal dado
-# pondo o __ antes da variável, recomenda-se FORTEMENTE que não seja acessado tal dado
 # o atributo que contém o _ no início foi feito para ser acessado SOMENTE de dentro da classe
+# pondo o __ antes da variável, recomenda-se FORTEMENTE que não seja acessado tal dado
 # o atributo que contém o __ no início indica que o programador não quer DE MANEIRA ALGUMA que tal dado seja acessado
