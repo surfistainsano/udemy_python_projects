@@ -1,15 +1,17 @@
 import csv
+from types import GeneratorType
 
 with open('clientes.csv', 'r') as file:
-    # dados = csv.reader(file)  # rtype: list
+    # dados = csv.reader(file)  # rtype: <class '_csv.reader'>
     # print(dados)  # // <_csv.reader object at 0x000001F0A3F4D300> ou seja, é um ITERADOR
     # next(dados)  # primeiro item consumido (cabeçalho)
 
     # dados = csv.DictReader(file)
     # fazendo um for é possível acessar por chaves, pois é um dict
-    # como ->dados<- é um gerador, não é possível fazer um laço de repetição fora do context manager ->with<-, pois
+    # como ->dados<- é um iterador, não é possível fazer um laço de repetição fora do context manager ->with<-, pois
     # o arquivo fora fechado. Logo, é possível fazer uma list comprehension para subir, de vereda, os dados na memória
 
+    print(isinstance(csv.DictReader(file), GeneratorType))  # // False
     dados = [x for x in csv.DictReader(file)]
 
 with open('clientes002.csv', 'w') as file:
@@ -17,7 +19,7 @@ with open('clientes002.csv', 'w') as file:
         file,
         delimiter=',',  # delimitador de tabelas do arquivo
         quotechar='"',  # é definido o caracter de aspas do arquivo (evita que arquivos com aspas gerem erros)
-        quoting=csv.QUOTE_ALL  # é definido que todos os valores do arquivos estejam entre aspas duplas
+        quoting=csv.QUOTE_ALL  # é definido que todos os valores do arquivo estejam entre aspas duplas
     )
 
     head = dados[0].keys()
